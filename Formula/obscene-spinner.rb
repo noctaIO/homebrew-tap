@@ -10,7 +10,7 @@ class ObsceneSpinner < Formula
   depends_on "python@3.13"
 
   def install
-    rewrite_shebang python_shebang_rewrite_info(Formula["python@3.13"].opt_bin/"python3.13"), "spin.py"
+    rewrite_shebang detected_python_shebang, "spin.py"
     bin.install "spin.py" => "obscene-spinner"
     bin.install_symlink bin/"obscene-spinner" => "spin"
   end
