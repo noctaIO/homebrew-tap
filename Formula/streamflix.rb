@@ -10,15 +10,15 @@ class Streamflix < Formula
       revision: "a0edb080011792235190fe6958f5ee52415627c9"
   version "0.1.0"
 
-  depends_on "python@3.12"
-  depends_on "mpv"    # default player for streaming
   depends_on "ffmpeg" # remux downloads + stream probing
+  depends_on "mpv"    # default player for streaming
+  depends_on "python@3.12"
 
   # Deps are resolved by pip at install time (curl_cffi ships a binary wheel with
   # its bundled libcurl-impersonate). A personal tap favors this over hand-pinned
   # resource stanzas for ~40 transitive deps.
   def install
-    venv = virtualenv_create(libexec, "python3.12")
+    virtualenv_create(libexec, "python3.12")
     system libexec/"bin/pip", "install", "-v", buildpath
     bin.install_symlink libexec/"bin/streamflix"
   end
