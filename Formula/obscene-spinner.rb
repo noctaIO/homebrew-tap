@@ -3,8 +3,8 @@ class ObsceneSpinner < Formula
 
   desc "The spinner verbs a senior dev actually mutters at 2am"
   homepage "https://github.com/noctaIO/obscene-spinner"
-  url "https://github.com/noctaIO/obscene-spinner/archive/refs/tags/v0.2.tar.gz"
-  sha256 "b36217eb3b8bec0f60b117bbe770cf11f7abafe6df24213da266f4592d56ad68"
+  url "https://github.com/noctaIO/obscene-spinner/archive/refs/tags/v0.3.tar.gz"
+  sha256 "cbbbaaffafe2bea7c2923c63739c8e31a577b02dd95c2bc350eed2a12911182e"
   license "MIT"
 
   depends_on "python@3.13"
